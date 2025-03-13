@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bfcghociryorq"]
+
+[ext_resource type="Script" uid="uid://cokpugonl00yd" path="res://addons/test/pdf-test.gd" id="2_1g2rj"]
+
+[node name="Gd-pdf-test" type="Node"]
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("2_1g2rj")
