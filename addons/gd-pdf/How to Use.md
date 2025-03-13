@@ -9,17 +9,23 @@ To use this, add `PDFGD` to your Autoloads under the Globals tab of your project
 `PDFGD` provides access to the `GetDocGD()` function, which returns a `PDFDocGD` object. This is a Godot object, and can be used immediately in GDScript.
 
 `PDFDocGD` is composed of `PDFPage`s.
-	- `PDFPage.PDFLines` is an Array of `PDFLine`s, which include text that spans the entire with of a page.
-	- *NOTE*: Currently, the code that determines the bounding box by which `PDFWord`s are grouped into lines is a hardcoded magic number, which is hacky. This should be fixed in a future update to use the MediaBox width of the page instead. 
+- `PDFPage.PDFLines` is an Array of `PDFLine`s, which include text that spans the entire with of a page.	
+- *NOTE*: Currently, the code that determines the bounding box by which `PDFWord`s are grouped into lines is a hardcoded magic number, which is hacky. This should be fixed in a future update to use the MediaBox width of the page instead. 
 
 `PDFLine`.
--`GetLineString()` gives the string value of the entire line of text.
-	- *NOTE*: This currently only separates the words by a signle space. But `PDFWords` within the line may be spaced much farther apart, like tabs or columns.
-	- **TODO**: Add `GetLineStringProperSpacing()` func to retrieve a single string of the line which has better approximated whitespace. 
--`GetLinePosition()` gives the x,y coordinates of the text line.
+
+- `GetLineString()` gives the string value of the entire line of text.
+	
+  - *NOTE*: This currently only separates the words by a signle space. But `PDFWords` within the line may be spaced much farther apart, like tabs or columns.
+	
+  - **TODO**: Add `GetLineStringProperSpacing()` func to retrieve a single string of the line which has better approximated whitespace. 
+
+- `GetLinePosition()` gives the x,y coordinates of the text line.
 
 Each `PDFLine` is composed of `PDFWord`s. 
+
 - `GetWordString()` gives the string of the word.
+
 - `GetWordPosition()` gives the x,y coordinates of the word.
 
 Finally, each `PDFWord` is composed of `PDFLetter`s.
