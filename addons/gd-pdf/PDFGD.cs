@@ -70,7 +70,7 @@ public partial class PDFGD : Node
 
 	// TODO: use strategy pattern / dependency injection to let caller decide
 	// which line breakdown strategy to use
-	private Array<PDFLine> GetLinesFromPageWords(IEnumerable<Word> words)
+	private Godot.Collections.Array<PDFLine> GetLinesFromPageWords(IEnumerable<Word> words)
 	{
 		Godot.Collections.Array<PDFLine> NewLinesArr = new();
 		Word someWord = words.ElementAt(0);
