@@ -8,7 +8,7 @@ using Godot.Collections;
 public partial class PDFPage : GodotObject
 {
     public Vector2 PageSizeInPoints = new(); // TODO: rename to "MediaBox" 
-    public Godot.Collections.Array<PDFLine> PDFLines = new(); // horizontal lines of text
+    public Array<PDFLine> PDFLines = new(); // horizontal lines of text
 
 
 }

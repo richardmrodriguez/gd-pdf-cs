@@ -9,6 +9,6 @@ using Godot.Collections;
 [GlobalClass]
 public partial class PDFDocGD : GodotObject
 {
-    public Godot.Collections.Array<PDFPage> PDFPages = new();
+    public Array<PDFPage> PDFPages = new();
 
 }

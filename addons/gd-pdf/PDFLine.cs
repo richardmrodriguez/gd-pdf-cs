@@ -7,7 +7,7 @@ using Godot.Collections;
 [GlobalClass]
 public partial class PDFLine : GodotObject
 {
-    public Godot.Collections.Array<PDFWord> PDFWords = new();
+    public Array<PDFWord> PDFWords = new();
 
     public string GetLineString()
     {

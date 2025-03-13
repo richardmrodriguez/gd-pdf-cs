@@ -14,7 +14,7 @@ using UglyToad.PdfPig.DocumentLayoutAnalysis.PageSegmenter;
 using PigDocAnalysis = UglyToad.PdfPig.DocumentLayoutAnalysis;
 using UglyToad.PdfPig.Core;
 
-// To use PDFGD in your project, add PDFIngester.cs to your Autoload
+// To use PDFGD in your project, add PDFGD.cs to your Autoload
 public partial class PDFGD : Node
 {
 
@@ -22,7 +22,7 @@ public partial class PDFGD : Node
 
 	public byte[] DocFileBytes;
 
-
+	// test /debug func
 	public string GetStringFromPDFPage(string PDFDocPath)
 	{
 
@@ -68,8 +68,9 @@ public partial class PDFGD : Node
 		return docGD;
 	}
 
-
-	private Godot.Collections.Array<PDFLine> GetLinesFromPageWords(IEnumerable<Word> words)
+	// TODO: use strategy pattern / dependency injection to let caller decide
+	// which line breakdown strategy to use
+	private Array<PDFLine> GetLinesFromPageWords(IEnumerable<Word> words)
 	{
 		Godot.Collections.Array<PDFLine> NewLinesArr = new();
 		Word someWord = words.ElementAt(0);
