@@ -7,7 +7,7 @@ func _ready() -> void:
 			print(
 			"%20s" % ("%.2v" % line.GetLinePosition()),
 			"%4s" % " ",
-			"%15s" % line.PDFWords[0].FontName,
+			"%25s" % line.PDFWords[0].FontName,
 			"%4s" % " ",
 			line.GetLineString()
 			)
