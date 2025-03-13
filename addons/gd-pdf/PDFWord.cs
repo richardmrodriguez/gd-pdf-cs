@@ -8,10 +8,12 @@ using UglyToad.PdfPig.Content;
 public partial class PDFWord : GodotObject
 {
     public Array<PDFLetter> PDFLetters = new();
-
+    public string FontName = "";
     public Vector2 WordPos = new();
     public Vector2 WordBBox = new();
     // TODO; Implement GetWordBBox which constructs the BBox from the size and pos of its letters
+
+
 
     public string GetWordString()
     {

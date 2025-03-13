@@ -100,6 +100,7 @@ public partial class PDFGD : Node
 				foreach (Word word in line.Words)
 				{
 					PDFWord NewWord = new();
+					NewWord.FontName = word.FontName;
 					foreach (Letter l in word.Letters)
 					{
 						//GD.Print("Here's a letter");
