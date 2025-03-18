@@ -2,6 +2,9 @@ extends Node
 
 func _ready() -> void:
 	var doc: PDFDocGD = PDFGD.GetDocGD("/home/rich/Downloads/pdfs/VCR2L-2024-04-16.pdf")
+	if not doc:
+		print("No doc received...")
+		return
 	for page: PDFPage in doc.PDFPages:
 		for line: PDFLine in page.PDFLines:
 			print(
